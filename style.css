@@ -13,14 +13,13 @@ body {
 
     font-family: 'AR One Sans', sans-serif;
     height: 3000px;
-    overflow-x: hidden;
     background: rgb(144,255,255);
 }
 
 header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -28,7 +27,7 @@ header {
 }
 
 header.glass {
-    background: rgba(127, 127, 127, 0.6);
+    background: rgba(81, 81, 81, 0.6);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
@@ -38,6 +37,16 @@ header .logo-title {
     text-decoration: none;
     color: rgb(225, 255, 255);
     font-family: 'Young Serif', serif;
+}
+
+header .logo-title span {
+    color: rgb(47, 255, 255); 
+    /* background-image: -webkit-linear-gradient(45deg, #3636ff 20%, rgba(144,255,255,1) 75%);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    text-fill-color: transparent; -webkit-text-fill-color: transparent; */
+          
+        
 }
 
 header nav {
@@ -72,6 +81,15 @@ header nav ul li:hover {
     display: none;
 }
 
+main {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 4rem;
+}
+
 main .hero {
     overflow-x: hidden;
     height: 100vh;
@@ -82,8 +100,7 @@ main .hero {
     background-position: center;
     background-size: cover;
     background: rgb(144,255,255);
-    background: linear-gradient(0deg, rgba(144,255,255,1) 12%, rgba(0,177,221,1) 65%, rgba(10,131,215,1) 100%); 
-    padding: 0 4rem;
+    background: linear-gradient(0deg, rgba(144,255,255,1) 12%, rgba(0,177,221,1) 65%, rgba(10,131,215,1) 100%);
     -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(210, 217, 213, 0));
     mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(210, 217, 213, 0));
 }
@@ -103,23 +120,26 @@ main .hero {
 }
 
 .hero .tag-line {
-    padding-top: 6rem;
+    padding-top: 5rem;
     z-index: 1;
 }
 
 .hero .tag-line-wrapper {
-    width: 80%;
+    width: 45%;
     position: fixed;
 }
 
 .hero .tag-line-title {
     font-family: 'Young Serif', serif;
     color: rgb(225, 255, 255);
-    font-size: 4vmax;
+    font-size: 3vmax;
+    margin-bottom: 1rem;
 }
 
 .hero .tag-line-desc {
     font-size: .8rem;
+    width: 70%;
+    text-align: justify;
     color: rgb(50, 50, 50);
 }
 
@@ -128,23 +148,25 @@ main .hero {
     position: fixed;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     left: 0;
-    bottom: 6rem;
-    padding: 0 4rem;
+    top: 8rem;
+    padding: 0 5rem;
 }
 
 .vimi .vission, 
 .vimi .mission {
     text-align: justify;
     max-width: 25vmax;
+    margin-bottom: 2rem;
 }
 
 .vission-title,
 .mission-title {
     text-align: center;
-    font-size: 3vmax;
+    font-size: 2vmax;
     font-family: 'Young Serif', serif;
     border-top: 2px solid rgb(50, 50, 50);
     border-bottom: 2px solid rgb(50, 50, 50);
@@ -171,7 +193,7 @@ main .hero {
 
 .section-title {
     text-align: center;
-    padding-top: 3rem;
+    padding-top: .8rem;
     margin-bottom: 3rem;
     font-size: 2rem;
     font-family: 'Young Serif', serif;
@@ -191,8 +213,6 @@ main .hero {
 
 
 .goals {
-    padding: 4rem;
-    padding-top: 2rem;
     z-index: 2;
     background: rgb(144,255,255);
     background: linear-gradient(180deg, rgba(144,255,255,1) 5%, rgba(182,255,88,1) 100%); 
@@ -203,7 +223,7 @@ main .hero {
 .goals-desc {
     text-align: justify;
     font-size: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     position: relative;
     width: 70%;
 }
@@ -241,7 +261,7 @@ main .hero {
 
 .goals-card {
     font-family: 'AR One Sans', sans-serif;
-    font-size: .8rem;
+    font-size: 1rem;
     padding: 1rem;
     border-radius: .5rem;
     background: rgb(178,254,81);
@@ -253,7 +273,7 @@ main .hero {
 }
 
 .goals-11 {
-    width: 15%;
+    width: 20%;
     margin-right: 1rem;
     float: left;
 }
@@ -270,10 +290,8 @@ main .hero {
 }
 
 .infographics {
-    padding: 4rem;
-    padding-top: 2rem;
     background: rgb(180,255,85);
-    background: linear-gradient(180deg, rgba(180,255,85,1) 0%, rgba(37,249,199,1) 100%);
+    background: linear-gradient(180deg, #b4ff55 0%, #25f9c7 100%);
 }
 
 .infographics .info-wrapper {
@@ -281,11 +299,13 @@ main .hero {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 2rem;
-    grid-row-gap: 2rem; 
+    grid-row-gap: 1rem; 
 }
 
 .info-wrapper img {
+    border-radius: 1rem;
     width: 100%;
+    box-shadow: 9px 13px 24px -7px rgba(0,0,0,0.59);
     grid-area: 1 / 1 / 3 / 2;
 }
 
@@ -303,11 +323,8 @@ main .hero {
 }
 
 .sustainable-component {
-    padding: 4rem;
-    padding-top: 2rem;
     background: rgb(42,249,195);
     background: linear-gradient(180deg, rgba(42,249,195,1) 0%, rgba(144,255,255,1) 100%); 
-    
 }
 
 .card-wrapper {
@@ -319,12 +336,14 @@ main .hero {
 .card-component {
     width: 30%;
     margin: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
     background-color: #A6F3FF;
     box-shadow: 9px 13px 24px -7px rgba(0,0,0,0.59);
 }
 
 .card-component:hover img {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .card-component .card-title {
@@ -343,6 +362,7 @@ main .hero {
     align-items: center;
     margin-bottom: 2rem;
     height: 250px;
+    border-radius: 0 0 1rem 1rem;
 }
 
 .card-component .card-thumb img {
@@ -398,13 +418,27 @@ main .hero {
 
     .hero .building.small {
         display: block;
+        left: 50%;
     }
     .hero .building.large {
         display: none;
     }
 
+    .hero .tag-line {
+        padding-top: 10rem;
+    }
+
+    .hero .tag-line-wrapper {
+        width: 80%;
+    }
+
     .hero .tag-line-title {
-        font-size: 4vmax;
+        font-size: 3vmax;
+    }
+
+    .hero .tag-line-desc {
+        font-size: .7rem;
+        width: 80%;
     }
 
     .hero .vimi  {
@@ -413,24 +447,32 @@ main .hero {
 
     .swiper {
         display: block;
-        bottom: 9rem;
+        bottom: 17rem;
         left: 3rem;
-        width: 60vw;
-        height: 50vw;
+        width: 30vmax;
+        height: 45vw;
         overflow-x : visible;
+        z-index: 10;
+    }
+
+    .vission-desc,
+    .mission-desc {
+        font-size: .7rem;
     }
 
     .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
         left: -1rem;
     }
 
-    section.goals {
-        padding: 8rem 3rem;
-
+    section {
+        padding: 3rem;
+        padding-top: 4rem;
     }
 
     .goals-desc {
         width: 100%;
+        font-size: .8rem;
+        margin-bottom: 2rem;
     }
 
     .goals-card-wrapper {
@@ -459,20 +501,12 @@ main .hero {
         font-size: .8rem;
     }
 
-    section.infographics {
-        padding: 5rem 3rem;
-    }
-
     section.infographics .info-wrapper {
         display: block;
     }
 
     section.infographics .info-wrapper img {
         margin-bottom: 1rem;
-    }
-
-    section.sustainable-component {
-        padding: 3rem;
     }
 
     .card-wrapper {

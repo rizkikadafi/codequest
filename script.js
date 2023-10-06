@@ -8,22 +8,9 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-pagination',
     },
   });
-  
-const header = document.querySelector('header');
-function changeHeaderBg() {
-  header.classList.add('glass');
-}
-
-document.addEventListener("scroll", (event) => {
-  changeHeaderBg();
-  let scrollPosition = window.scrollY;
-  if (scrollPosition === 0) {
-    header.classList.remove('glass');
-  }
-
-})
 
 const body = document.querySelector('body');
+const html = document.querySelector('html');
 const sidebar = document.querySelector('nav');
 const humburger = document.querySelector('#humburger');
 const closeBtn = document.querySelector('#close');
@@ -45,9 +32,17 @@ menu.forEach(elm => {
   })
 });
 
-// body.addEventListener("click", (event) => {
-//   closeSideBar();
-// })
+const swiperelm = document.querySelector('.swiper');
+
+document.addEventListener("scroll", (event) => {
+  swiperelm.style.zIndex = 10;
+  let scrollPosition = window.scrollY;
+  if (scrollPosition !== 0) {
+    swiperelm.style.zIndex = -1;
+  }
+
+});
+
 
 
   
