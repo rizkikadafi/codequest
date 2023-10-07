@@ -1,27 +1,25 @@
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
+  direction: 'horizontal',
+  loop: true,
 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  });
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-const body = document.querySelector('body');
-const html = document.querySelector('html');
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+
 const sidebar = document.querySelector('nav');
 const humburger = document.querySelector('#humburger');
 const closeBtn = document.querySelector('#close');
+
 function closeSideBar() {
   sidebar.style.right = "-500px";
 }
+
 humburger.addEventListener("click", (event) => {
   sidebar.style.right = 0;
 })
@@ -35,19 +33,4 @@ menu.forEach(elm => {
   elm.addEventListener("click", (event) => {
     closeSideBar();
   })
-});
-
-// const swiperelm = document.querySelector('.swiper');
-
-// document.addEventListener("scroll", (event) => {
-//   swiperelm.style.zIndex = 10;
-//   let scrollPosition = window.scrollY;
-//   if (scrollPosition !== 0) {
-//     swiperelm.style.zIndex = -1;
-//   }
-
-// });
-
-
-
-  
+});  
