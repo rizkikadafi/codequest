@@ -1,3 +1,9 @@
+:root {
+    --base-color: rgb(144,255,255);
+    --bright-color: rgb(225, 255, 255);
+    --dark-color: rgb(50, 50, 50);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,9 +19,10 @@ body {
 
     font-family: 'AR One Sans', sans-serif;
     height: 3000px;
-    background: rgb(144,255,255);
+    background: var(--base-color);
 }
 
+/* Header start */
 header {
     position: fixed;
     top: 0;
@@ -35,12 +42,12 @@ header.glass {
 
 header .logo-title {
     text-decoration: none;
-    color: rgb(225, 255, 255);
+    color: var(--bright-color);
     font-family: 'Young Serif', serif;
 }
 
 header .logo-title span {
-    color: rgb(47, 255, 255); 
+    color: rgb(144, 255, 255); 
 }
 
 header nav {
@@ -57,11 +64,11 @@ header nav ul {
 
 header nav ul li a {
     text-decoration: none;
-    color: rgb(225, 255, 255);
+    color: var(--bright-color);
 }
 
 header nav ul li:hover {
-    border-bottom: 1px solid rgb(225, 255, 255);
+    border-bottom: 1px solid var(--bright-color);
 }
 
 #humburger {
@@ -74,6 +81,7 @@ header nav ul li:hover {
 #close {
     display: none;
 }
+/* Header end */
 
 main {
     width: 100vw;
@@ -84,6 +92,7 @@ section {
     padding: 4rem;
 }
 
+/* Hero start */
 main .hero {
     overflow-x: hidden;
     height: 100vh;
@@ -94,12 +103,10 @@ main .hero {
     background-position: center;
     background-size: cover;
     background: rgb(144,255,255);
-    background: linear-gradient(0deg, rgba(144,255,255,1) 12%, rgba(0,177,221,1) 65%, rgba(10,131,215,1) 100%);
+    background: linear-gradient(0deg, rgba(144,255,255,1) 12%, #00b1dd 65%, #0a83d7 100%);
     -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(210, 217, 213, 0));
     mask-image: linear-gradient(rgba(0, 0, 0, 1) 80%, rgba(210, 217, 213, 0));
 }
-
-
 
 .hero .building {
     position: absolute;
@@ -125,8 +132,7 @@ main .hero {
 
 .hero .tag-line-title {
     font-family: 'Young Serif', serif;
-    /* color: rgb(225, 255, 255); */
-    color: rgb(50, 50, 50);
+    color: var(--dark-color);
     font-size: 3vmax;
     margin-bottom: 1rem;
 }
@@ -134,7 +140,7 @@ main .hero {
 .hero .tag-line-desc {
     font-size: .8rem;
     width: 70%;
-    color: rgb(50, 50, 50);
+    color: var(--dark-color);
 }
 
 .btn-learn-more {
@@ -147,18 +153,18 @@ main .hero {
 }
 
 .btn-learn-more:hover {
-    background-color: rgb(50, 50, 50);
+    background-color: var(--dark-color);
     border: none;
 }
 
 .btn-learn-more:hover a {
-    color: antiquewhite;
+    color: var(--bright-color);
 }
 
 .btn-learn-more a {
     transition: ease .5s;
     text-decoration: none;
-    color: rgb(50, 50, 50);
+    color: var(--dark-color);
     font-weight: bold;
 }
 
@@ -187,10 +193,10 @@ main .hero {
     text-align: center;
     font-size: 2vmax;
     font-family: 'Young Serif', serif;
-    border-top: 2px solid rgb(50, 50, 50);
-    border-bottom: 2px solid rgb(50, 50, 50);
+    border-top: 2px solid var(--dark-color);
+    border-bottom: 2px solid var(--dark-color);
     margin-bottom: 1rem;
-    color: rgb(50, 50, 50);
+    color: var(--dark-color);
 }
 
 
@@ -198,21 +204,20 @@ main .hero {
 .mission-desc {
     font-size: .8rem;
     text-align: justify;
-    color: rgb(50, 50, 50);
+    color: var(--dark-color);
 }
 
 .swiper {
     display: none;
 }
   
-
 .section-title {
     text-align: center;
     padding-top: .8rem;
     margin-bottom: 3rem;
     font-size: 2rem;
     font-family: 'Young Serif', serif;
-    color: rgb(50, 50, 50);
+    color: var(--dark-color);
     position: relative;
 }
 
@@ -220,13 +225,14 @@ main .hero {
     content: '';
     height: 1px;
     width: 3rem;
-    background-color: rgb(50, 50, 50);
+    background-color: var(--dark-color);
     position: absolute;
     bottom: 0;
     margin-left: -1rem;
 }
+/* hero end */
 
-
+/* goals start */
 .goals {
     z-index: 2;
     background: rgb(144,255,255);
@@ -261,7 +267,7 @@ main .hero {
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    color: rgb(50, 50, 50);
+    color: var(--dark-color);
     transition: .8s;
 }
 
@@ -284,7 +290,6 @@ main .hero {
     box-shadow: 9px 13px 24px -7px rgba(0,0,0,0.59);
     display: flex;
     width: 60%;
-
 }
 
 .goals-11 {
@@ -296,17 +301,18 @@ main .hero {
 .goals-11-desc {
     width: 80%;
     font-size: .8rem;
-
 }
 
 .goals > img {
     position: absolute;
     bottom: 0;
 }
+/* Goals end */
 
+/* infographics start */
 .infographics {
     background: rgb(180,255,85);
-    background: linear-gradient(180deg, #b4ff55 0%, #25f9c7 100%);
+    background: linear-gradient(180deg, rgb(180, 255, 85) 0%, rgb(37, 249, 199) 100%);
 }
 
 .infographics .info-wrapper {
@@ -336,7 +342,9 @@ main .hero {
 .infographics p {
     font-size: .8rem;
 }
+/* infographics end */
 
+/* component start */
 .sustainable-component {
     background: rgb(42,249,195);
     background: linear-gradient(180deg, rgba(42,249,195,1) 0%, rgba(144,255,255,1) 100%); 
@@ -387,7 +395,9 @@ main .hero {
 .card-component .card-content {
     padding: 0 2rem 2rem;
 }
+/* components end */
 
+/* footer start */
 footer {
     text-align: center;
     padding: 2rem 0;
@@ -419,21 +429,24 @@ footer h2 {
 .copyright {
     padding-top: 2rem;
 }
-
+/* footer end */
 
 
 @media (max-width: 767.98px) { 
     header {
         padding: 1.5rem 3rem;
     }
+
     header nav {
         position: absolute;
         height: 100vh;
         width: 80%;
         right: -1000px;
         top: 0;
-        background-color: blue;
+        background: rgb(10,131,215);
+        background: linear-gradient(120deg, rgba(10,131,215,1) 80%, rgba(0,177,221,1) 100%); 
     }
+
     header nav #close {
         display: block;
         position: absolute;
@@ -441,6 +454,7 @@ footer h2 {
         top: 1rem;
         cursor: pointer;
     }
+
     header nav ul {
         flex-direction: column;
         height: 100%;
@@ -448,13 +462,20 @@ footer h2 {
         align-items: center;
 
     }
+
     header nav ul li {
         margin-bottom: 2rem;
         box-sizing: border-box;
     }
+
+    header nav ul li a {
+        font-weight: bold;
+    }
+
     #humburger {
         display: flex;
     }
+
     section.hero {
         padding: 0 3rem;
     }
@@ -467,6 +488,7 @@ footer h2 {
         display: block;
         left: 50%;
     }
+
     .hero .building.large {
         display: none;
     }
@@ -491,16 +513,6 @@ footer h2 {
     .hero .vimi  {
         display: none;
     }
-
-    /* .swiper {
-        display: block;
-        bottom: 17rem;
-        left: 3rem;
-        width: 30vmax;
-        height: 45vw;
-        overflow-x : visible;
-        z-index: 10;
-    } */
 
     .swiper {
         height: 16rem;
@@ -573,8 +585,5 @@ footer h2 {
     .card-component {
         width: 100%;
         margin: 1rem 0;
-    }
-
-    
-    
+    }   
 }
