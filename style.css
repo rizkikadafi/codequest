@@ -41,12 +41,6 @@ header .logo-title {
 
 header .logo-title span {
     color: rgb(47, 255, 255); 
-    /* background-image: -webkit-linear-gradient(45deg, #3636ff 20%, rgba(144,255,255,1) 75%);
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    text-fill-color: transparent; -webkit-text-fill-color: transparent; */
-          
-        
 }
 
 header nav {
@@ -131,7 +125,8 @@ main .hero {
 
 .hero .tag-line-title {
     font-family: 'Young Serif', serif;
-    color: rgb(225, 255, 255);
+    /* color: rgb(225, 255, 255); */
+    color: rgb(50, 50, 50);
     font-size: 3vmax;
     margin-bottom: 1rem;
 }
@@ -139,8 +134,32 @@ main .hero {
 .hero .tag-line-desc {
     font-size: .8rem;
     width: 70%;
-    text-align: justify;
     color: rgb(50, 50, 50);
+}
+
+.btn-learn-more {
+    background: transparent;
+    margin-top: 2rem;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    transition: ease .5s;
+    border: 1px solid rgb(50, 50, 50);
+}
+
+.btn-learn-more:hover {
+    background-color: rgb(50, 50, 50);
+    border: none;
+}
+
+.btn-learn-more:hover a {
+    color: antiquewhite;
+}
+
+.btn-learn-more a {
+    transition: ease .5s;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
 }
 
 .hero .vimi {
@@ -171,7 +190,7 @@ main .hero {
     border-top: 2px solid rgb(50, 50, 50);
     border-bottom: 2px solid rgb(50, 50, 50);
     margin-bottom: 1rem;
-    color: rgb(225, 255, 255);
+    color: rgb(50, 50, 50);
 }
 
 
@@ -183,12 +202,8 @@ main .hero {
 }
 
 .swiper {
-    height: 300px;
-    position: fixed;
-    bottom: 2rem;
-    left: 4rem;
     display: none;
-  }
+}
   
 
 .section-title {
@@ -373,6 +388,38 @@ main .hero {
     padding: 0 2rem 2rem;
 }
 
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgb(42,249,195);
+}
+
+footer h2 {
+    margin-bottom: 2rem;
+}
+
+.social-icon ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    margin: auto;
+}
+
+.social-icon ul li:nth-child(2) {
+    margin: 0 2rem;
+}
+
+.social-icon ul li a img {
+    width: 2rem;
+    color: rgb(207, 207, 207);
+}
+
+.copyright {
+    padding-top: 2rem;
+}
+
 
 
 @media (max-width: 767.98px) { 
@@ -425,7 +472,7 @@ main .hero {
     }
 
     .hero .tag-line {
-        padding-top: 10rem;
+        padding-top: 8rem;
     }
 
     .hero .tag-line-wrapper {
@@ -433,11 +480,11 @@ main .hero {
     }
 
     .hero .tag-line-title {
-        font-size: 3vmax;
+        font-size: 4vmax;
     }
 
     .hero .tag-line-desc {
-        font-size: .7rem;
+        font-size: .8rem;
         width: 80%;
     }
 
@@ -445,7 +492,7 @@ main .hero {
         display: none;
     }
 
-    .swiper {
+    /* .swiper {
         display: block;
         bottom: 17rem;
         left: 3rem;
@@ -453,11 +500,21 @@ main .hero {
         height: 45vw;
         overflow-x : visible;
         z-index: 10;
+    } */
+
+    .swiper {
+        height: 16rem;
+        display: block;
+    }
+
+    .vission-title,
+    .mission-title {
+        font-size: 3vmax;
     }
 
     .vission-desc,
     .mission-desc {
-        font-size: .7rem;
+        font-size: .8rem;
     }
 
     .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
@@ -517,5 +574,7 @@ main .hero {
         width: 100%;
         margin: 1rem 0;
     }
+
+    
     
 }

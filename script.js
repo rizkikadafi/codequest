@@ -1,7 +1,12 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   
     // If we need pagination
     pagination: {
@@ -32,16 +37,16 @@ menu.forEach(elm => {
   })
 });
 
-const swiperelm = document.querySelector('.swiper');
+// const swiperelm = document.querySelector('.swiper');
 
-document.addEventListener("scroll", (event) => {
-  swiperelm.style.zIndex = 10;
-  let scrollPosition = window.scrollY;
-  if (scrollPosition !== 0) {
-    swiperelm.style.zIndex = -1;
-  }
+// document.addEventListener("scroll", (event) => {
+//   swiperelm.style.zIndex = 10;
+//   let scrollPosition = window.scrollY;
+//   if (scrollPosition !== 0) {
+//     swiperelm.style.zIndex = -1;
+//   }
 
-});
+// });
 
 
 
